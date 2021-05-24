@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MicroCoin Chat\MicroCoin Chat\MicroCoin.API\MicroCoin.API.csproj" />
+    <ProjectReference Include="..\Api\MicroCoin.API.csproj" />
   </ItemGroup>
 
 </Project>

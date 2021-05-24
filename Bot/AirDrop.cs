@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RewardBot
+namespace AirDrop
 {
     public class AirDrop
     {
