@@ -32,6 +32,21 @@ namespace AirDrop
         private static DiscordSocketClient _client;
         static async Task Main(string[] args)
         {
+            if(string.IsNullOrEmpty(pKey))
+            {
+                Console.WriteLine($"Adj meg privát kulcsot ({nameof(Program)}.{nameof(pKey)})!");
+                return;
+            }
+            if (string.IsNullOrEmpty(DiscordToken))
+            {
+                Console.WriteLine($"Adj meg Discord Tokent ({nameof(Program)}.{nameof(DiscordToken)})!");
+                return;
+            }
+            if (string.IsNullOrEmpty(botAccount))
+            {
+                Console.WriteLine($"Adj meg bot számlaszámot ({nameof(Program)}.{nameof(botAccount)})!");
+                return;
+            }
             dbName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RewardBot-Data");
             if (!Directory.Exists(dbName))
             {
