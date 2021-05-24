@@ -14,14 +14,6 @@ using System.Threading.Tasks;
 
 namespace RewardBot
 {
-    public class AirDrop
-    {
-        public int Id { get; set; }
-        public ulong UserId { get; set; }
-        public string Account { get; set; }
-        public decimal Amount { get; set; }
-        public DateTime DateTime { get; set; }
-    }
 
     class Program
     {
@@ -90,7 +82,7 @@ namespace RewardBot
         public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
         {
             // Unix timestamp is seconds past epoch
-            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
         }
